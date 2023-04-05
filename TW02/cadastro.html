@@ -1,0 +1,110 @@
+<!DOCTYPE html> 
+
+<html>  
+   <head> 
+      <meta charset = "utf-8"> 
+      <title>Cadastro</title> 
+   </head> 
+  
+   <body> 
+      <header>
+        <h1>Cadastro</h1>
+        <h2>Preencha o formulário abaixo</h2>
+    </header> 
+
+      
+      <article> 
+        <progress value='10' max='100'></progress>
+         <form>
+            
+         <section>
+           
+        <p>
+            <label>Data de Nascimento: </label>
+            <input type="date" name="data">
+        </p>
+
+        <p>
+            <label>Email: </label>
+            <input type="email" name="email">
+        </p>
+
+        <p>
+            <label>Telefone: </label>
+            <input type="tel" name="telefone">
+        </p>
+
+        <p>
+            <label>Mês de Adesão: </label>
+            <input type="month" name="mes_adesao">
+        </p>
+
+
+
+        <p>
+            <label>Número de filmes que o cliente pretende ver semanalmente: </label>
+          <input type="number" min="1" max="7" step="1" name="numfilmes">
+        </p>
+        
+
+
+        <p>
+            <label>Cor de preferência para visualização da área do cliente: </label>
+                <input type="color" id="head" name="head"
+                value="#e66465">
+               
+           
+
+
+        </p>
+        
+
+        <p>
+            <label>Endereço da página pessoal do cliente: </label>
+            <input type="url" name="url_cliente">
+        </p>
+        
+
+        <p>
+            <label>Data e hora que o cliente prefere utilizar o cupom de desconto da primeira compra: </label>
+            <input type="datetime-local" id="dh_cupom" name="dh_cupom">
+        </p>
+        
+
+
+        <p>
+            <label>Preferência de gênero de filmes: </label>
+
+            <ul>
+                <li>Ação</li>
+                    <input type="range" min = "0" max = "10" step "1" value = "5" name="acao">
+                <li>Drama</li>
+                    <input type="range" min = "0" max = "10" step "1" value = "5" name="drama">
+                <li>Romance</li>
+                    <input type="range" min = "0" max = "10" step "1" value = "5" name="romance">
+                <li>Comédia</li>
+                    <input type="range" min = "0" max = "10" step "1" value = "5" name="comedia">
+                <li>Suspense</li>
+                    <input type="range" min = "0" max = "10" step "1" value = "5" name="suspense">
+                <li>Terror</li>
+                    <input type="range" min = "0" max = "10" step "1" value = "5" name="terror">
+                <li>Ficção científica</li>
+                    <input type="range" min = "0" max = "10" step "1" value = "5" name="ficcao">
+                
+            </ul>
+
+
+
+        </p>
+        
+
+        <button type="submit">enviar</button>
+         </section> 
+         </form> 
+      </article> 
+    
+      
+      <hr>
+      <footer>MovieBox Cinemas</footer> 
+   </body> 
+</html> 
