@@ -1,0 +1,275 @@
+
+   h1{
+      font-family: "Century Gothic";
+      color:#f47070;
+      text-align: center;  
+
+      background-color: #b0dcec;
+      padding: 40px;
+
+   
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* seletor do tipo pseudo-elemento*/
+   h1::after{
+    content: "🍿";
+   }
+
+
+   h1::before{
+    content: "🎞️"
+   }
+
+
+    h2{
+      color:#55ccfa;
+      text-align: center; 
+      margin-top: 50px;
+   
+   }
+
+  .teste{
+    color: #f47070;
+    font-size: 25px;
+    margin-top: 30px;
+  }
+
+
+
+
+   .nomefilme {
+    font-size: 50px;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+   }
+
+
+
+
+
+  
+
+
+  *{ /*seletor universal*/
+   
+   box-sizing: border-box;
+
+  }
+
+
+  .card {
+  background-color: rgb(127, 148, 92);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.card  a {
+   display: flex;
+   justify-content: center;
+
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+    margin: 50px;
+    border:5px solid rgb(113, 153, 167);
+    background-color: rgb(254, 191, 191);
+    animation: mymove 5s infinite;
+
+}
+
+@keyframes mymove {
+  from {background-color:rgb(113, 153, 167);}
+  to {background-color: rgb(254, 191, 191);}
+}
+
+
+input[type=range] {
+  accent-color: green;
+}
+
+/* seletor de elemento*/
+progress {
+  accent-color: hsl(39, 100%, 50%);
+}
+
+
+.navegacao {
+  overflow: hidden;
+  margin-top: 50px;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.navegacao a {
+  font-size: 5mm; /*unidade de medida absoluta*/
+  float: center;
+  display: inline;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.navegacao a:hover { /* seletor do tipo pseudo-classe*/
+  background-color: #ddd;
+  color: black;
+}
+
+
+
+
+.footer {
+  font-size: 20px;
+
+  background-color: #F1F1F1;
+  background-image: url("listras.png");
+
+  text-align: center;
+  padding: 5px;
+  /*margin-top: 200px;*/
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+
+  font-weight:bolder;
+  font-family: "Century Gothic";
+}
+
+
+
+
+.deco_im {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+
+/*seletor do tipo atributo*/
+meter[value="0"]{
+  
+  background:red;
+
+}
+
+/*----------------Cadastro---------------*/
+
+input{
+   /*width:50%;*/
+   padding: 10px;
+   margin:10px 0;
+   border: 1px solid #eee;
+   box-shadow:0 0 15px 8px rgba(58, 181, 230, 0.06);
+   border-radius:10px;
+}
+
+button {
+
+  text-align: center;
+  padding:10px;
+  border:none;
+  background-color:#604045;
+  color:#fff;
+  font-weight:600;
+  border-radius:5px;
+  
+
+}
+
+button:hover {
+  cursor: pointer;
+  border: 2px solid black;
+  background-color: rgb(159, 49, 21);
+}
+
+
+
+.pref {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:rgb(138, 34, 34);
+  text-align: center;
+  margin-top: 70px;
+}
+
+
+
+
+
+.container {
+  display: inline;
+  
+ /* flex-direction: row; */
+  
+}
+
+.column {
+  width: 60%;
+  margin: 10px;
+  float: left;
+}
+
+
+
+.column p{
+  margin-top: 50px;
+}
+
+
+.pref_gen{
+  margin-bottom: 50px;
+}
+
+
+
+.divisao {
+  display: flex;
+  color: #302121;
+}
+
+
+.det1 {
+  flex-basis: 25%;
+}
+
+.det2 {
+  flex-basis: 65%;
+  text-align: center;
+}
+
+
+.det2 p { 
+  margin-top: 40px;
+  text-align: auto;
+
+}
+
+
+
+.divisao .cla{
+ 
+   color: rgb(185, 35, 35);
+}
+
+.divisao .tcor{
+  color: inherit;  /*controle de herança*/
+}
