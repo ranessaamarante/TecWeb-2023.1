@@ -634,6 +634,10 @@ font-family: 'Fonte1', sans-serif;
 
 @media (min-width: 320px) {
 
+
+
+/*================================Cabeçalho==================================*/
+
 .hd3{
   margin-left: auto;
   margin-right: auto;
@@ -659,29 +663,78 @@ font-family: 'Fonte1', sans-serif;
 
 }
 
+/*============================barra cinza============================*/
 
-.prin_l{
-      display: block;
-      align-items: center;
-     
-      
+
+.barra{
+  display: block;
+  height: auto;
+  text-align: center;
 }
 
 
 
-.prin_l .t2{
-  width: 100%;
-  margin-top:20px;
-}
 
-.buttons{
-  margin-top: 50px;
-   text-align: center;
-   margin-left: auto;
-   margin-right: auto;
-   justify-content: center;
+/*============================barra branca============================*/
+
+
+  .h_cont{
+  width: 90%;
+  height: auto;
+  display:block;
   
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+
+
+  }
+
+
+.n1{
+  margin: 0 10px;
+  width: auto;
+
+
+  
+  text-align: center;
+  font-size: 20px;
+ border-bottom: 2px solid  #ff340c;
+  height: 30px;
+ 
 }
+
+.n2{
+  margin: 0 10px;
+width: auto;
+  margin-left: auto;
+  margin-right: auto;
+
+ border-bottom: 2px solid  #ff340c;
+  text-align: center;
+  font-size: 20px;
+  /* border: 2px solid hotpink; */
+  height: 30px;
+
+}
+
+.n3{
+margin: 0 10px;
+
+ border-bottom: 2px solid  #ff340c;
+  text-align: center;
+  font-size: 20px;
+
+  height: 30px;
+
+ 
+}
+
+
+
+
+/*================================Recomendação de Filmes==================================*/
+
 
 
 .principal {
@@ -709,6 +762,30 @@ font-family: 'Fonte1', sans-serif;
   
 }
 
+
+
+.prin_l{
+      display: block;
+      align-items: center;
+     
+      
+}
+
+
+
+.prin_l .t2{
+  width: 100%;
+  margin-top:20px;
+}
+
+.buttons{
+  margin-top: 50px;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   justify-content: center;
+  
+}
 
 
 .box-r {
@@ -773,63 +850,8 @@ font-family: 'Fonte1', sans-serif;
 
 
 
-  .h_cont{
-  width: 90%;
-  height: auto;
-  display:block;
-  
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
 
 
-  }
-
-
-.n1{
-  margin: 0 10px;
-  width: auto;
-
-
-  
-  text-align: center;
-  font-size: 20px;
- border-bottom: 2px solid  #ff340c;
-  height: 30px;
- 
-}
-
-.n2{
-  margin: 0 10px;
-width: auto;
-  margin-left: auto;
-  margin-right: auto;
-
- border-bottom: 2px solid  #ff340c;
-  text-align: center;
-  font-size: 20px;
-  /* border: 2px solid hotpink; */
-  height: 30px;
-
-}
-
-.n3{
-margin: 0 10px;
-
- border-bottom: 2px solid  #ff340c;
-  text-align: center;
-  font-size: 20px;
-
-  height: 30px;
-
- 
-}
-
-.barra{
-  display: block;
-  height: auto;
-  text-align: center;
-}
 
 .a1{
   margin-bottom: 10px;
@@ -917,9 +939,9 @@ margin: 0 10px;
 
 }
 
-/* Style the topnav links */
+
 .navegacao a {
-  font-size: 30px; /*unidade de medida absoluta*/
+  font-size: 30px;
   
   display: block;
   color: #f2f2f2;
@@ -932,7 +954,8 @@ margin: 0 10px;
  
 }
 
-/*----------------------*/
+
+/*============================ranking de filmes============================*/
 
 .boxes {
   display: block;
@@ -1047,6 +1070,11 @@ margin-top: 80px;
 
 
 
+/*========================================================*/
+/*========================================================*/
+/*========================================================*/
+
+
 
 
 
@@ -1057,66 +1085,53 @@ margin-top: 80px;
 
 @media (min-width: 768px) and (max-width: 1199px) {
 
-.c_im img{
- 
-   height: 200px;
-   
-}
-
+/*================================Cabeçalho==================================*/
 
 .hd4{
   display: flex;
 }
 
-.imagem img {
-margin-top: 80px;
+/*============================barra cinza============================*/
+.barra{
+  display: flex;
+  width: 90%;
+  height: height;
+  background-color: #787474;
+
+  margin-left: auto;
+  align-items: center;
+  margin-right: auto;
+  font-family: 'Fonte1', sans-serif;
 }
 
 
+.trending{
+color: #fae319;
+margin-left: 10px;
+cursor: pointer;
+}
 
-.box-l {
-  width: 70%; /* Define a largura das boxes */
-  height: 900px; /* Define a altura das boxes */
-  margin-right: 40px;
+.barra .n{
+   color: #f2f2f2;
+   margin-left: 20px;
+   cursor: pointer;
+}
+
+.navegacao a {
+  font-size: 30px; /*unidade de medida absoluta*/
   
-  margin-top: auto;
-}
-
-.box-r {
-  width: 30%; /* Define a largura das boxes */
-  height: auto; /* Define a altura das boxes */
-
-
- margin-top: auto;
+  display: inline;
+  color: #f2f2f2;
+  line-height: 80px;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  
  
 }
 
-
-
-
-
-
-
-.social{
-  margin-top: auto;
-}
-
-
-
-.principal {
-  width: 90%; 
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente os elementos */
-  align-items: center; /* Centraliza verticalmente os elementos */
-  margin-top: 100px;
-
-  margin-left: auto;
-  margin-right: auto;
-  height: 800px;
-  /* border: 2px solid rgb(115, 214, 232); */
-}
-
-
+/*============================barra branca============================*/
 
 .h_cont{
   width: 90%;
@@ -1181,50 +1196,98 @@ border-bottom: none;
  
 }
 
-.barra{
+
+
+/*================================Recomendação de Filmes==================================*/
+
+
+
+
+.c_im img{
+ 
+   height: 200px;
+   
+}
+
+
+.imagem img {
+margin-top: 80px;
+}
+
+
+
+.box-l {
+  width: 70%; /* Define a largura das boxes */
+  height: 900px; /* Define a altura das boxes */
+  margin-right: 40px;
+  
+  margin-top: auto;
+}
+
+.box-r {
+  width: 30%; /* Define a largura das boxes */
+  height: auto; /* Define a altura das boxes */
+
+
+ margin-top: auto;
+ 
+}
+
+
+
+
+.social{
+  margin-top: auto;
+}
+
+
+
+.principal {
+  width: 90%; 
   display: flex;
-  width: 90%;
-  height: height;
-  background-color: #787474;
+  justify-content: center; /* Centraliza horizontalmente os elementos */
+  align-items: center; /* Centraliza verticalmente os elementos */
+  margin-top: 100px;
 
   margin-left: auto;
-  align-items: center;
   margin-right: auto;
-  font-family: 'Fonte1', sans-serif;
+  height: 800px;
+  /* border: 2px solid rgb(115, 214, 232); */
 }
 
-.trending{
-color: #fae319;
-margin-left: 10px;
-cursor: pointer;
-}
 
-.barra .n{
-   color: #f2f2f2;
-   margin-left: 20px;
-   cursor: pointer;
-}
 
-.navegacao a {
-  font-size: 30px; /*unidade de medida absoluta*/
+
+
+.hb {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente os elementos */
+  align-items: center; /* Centraliza verticalmente os elementos */
   
-  display: inline;
-  color: #f2f2f2;
-  line-height: 80px;
-  text-align: center;
-  padding: 20px;
-  text-decoration: none;
-  cursor: pointer;
+ 
   
  
 }
+
+.news{
+
+   height: 400px;
+}
+
+.t2{
+  margin-top: 30px;
+}
+
+
+
 
 .review{
 
   margin-top: 0;
 }
 
-/*----------------------------------*/
+
+/*============================Ranking de filmes============================*/
 
 .boxes {
   display: flex;
@@ -1271,11 +1334,7 @@ cursor: pointer;
   
   
 }
-.box.nome{
-  width: 50%;
 
-  
-}
 .box img{
   width: 20px;
 
@@ -1311,33 +1370,163 @@ cursor: pointer;
   margin-right: 10px;
   
 }
-/*----------------------*/
 
 
-.hb {
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente os elementos */
-  align-items: center; /* Centraliza verticalmente os elementos */
-  
- 
-  
- 
-}
 
-.news{
 
-   height: 400px;
-}
-
-.t2{
-  margin-top: 30px;
-}
 
 
 }
+
+
+/*========================================================*/
+/*========================================================*/
+/*========================================================*/
+
+
 
 
 @media (min-width: 1200px){
+
+
+/*================================Cabeçalho==================================*/
+
+.hd1{
+        
+  display: flex;
+  width: 90%;
+  height: 200px;
+  background-color: #ff340c;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  align-items: center;
+
+  
+}
+
+.hd2{
+
+        flex-basis: 30%;
+      
+        height: 150px;
+   
+   
+        text-align: left;
+        display: flex;
+        
+}
+
+.hd3{
+ 
+       
+  
+       
+        display: block;
+        width: 90%;
+        height: 200px;
+       position: relative;
+           font-family: 'Fonte1', sans-serif;
+   
+ 
+ 
+}
+
+
+
+.comp{
+
+  display: block;
+  width: 100%;
+  height: 50%;
+  background-color: #ff340c;
+  color: #f2f2f2;
+  text-align: left;
+
+  font-size: 50px;
+  position: absolute;
+  margin-top: 50px;
+
+}
+
+.desc{
+
+
+  display: block;
+  width: 100%;
+  height: auto;
+  color: #f2f2f2;
+  background-color: #ff340c;
+
+  text-align: left;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+ 
+}
+
+
+
+/*============================barra branca============================*/
+
+.h_cont{
+  display:flex;
+
+  width: 90%;
+  height: auto;
+
+  justify-content: flex-end;
+ 
+  
+  font-size: 25px;
+
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: 'Fonte1', sans-serif;
+}
+
+
+.n1{
+
+width: 250px;
+  margin: 0 0;
+
+
+  text-align: center;
+  font-size: 20px;
+  
+  height: 30px;
+  border-bottom: none;
+}
+
+.n2{
+margin: 0 0;
+  border-left: 2px solid #ff340c;
+
+  text-align: center;
+  font-size: 20px;
+
+  height: 30px;
+  width: 100px;
+  border-bottom: none;
+
+}
+
+.n3{
+
+margin: 0 0;
+border-left: 2px solid #ff340c;
+border-bottom: none;
+  text-align: right;
+  font-size: 20px;
+
+  height: 30px;
+  width: 110px;
+  
+
+}
+
+/*============================barra cinza============================*/
 
 .barra{
   display: flex;
@@ -1350,6 +1539,10 @@ cursor: pointer;
   margin-right: auto;
   font-family: 'Fonte1', sans-serif;
 }
+
+
+/*================================Recomendação de Filmes==================================*/
+
 
 
 .principal {
@@ -1429,8 +1622,6 @@ cursor: pointer;
 
 
 
-
-
 .navegacao a {
   font-size: 30px; /*unidade de medida absoluta*/
   
@@ -1446,13 +1637,31 @@ cursor: pointer;
 }
 
 
+
+
+
+
+.imagem img {
+margin-top: auto;
+}
+
+.hd4{
+  display: flex;
+}
+.buttons{
+  margin-top: 0;
+}
+
+
+
 .news{
 
   height: 500px;
 }
 
 
-/*----------------------------------*/
+/*============================ranking de filmes============================*/
+
 .boxes {
   display: flex;
   justify-content: center; /* Centraliza horizontalmente os elementos */
@@ -1532,153 +1741,6 @@ cursor: pointer;
 
 
 
-.h_cont{
-  display:flex;
-
-  width: 90%;
-  height: auto;
-
-  justify-content: flex-end;
- 
-  
-  font-size: 25px;
-
-  cursor: pointer;
-  margin-top: 20px;
-  font-family: 'Fonte1', sans-serif;
-}
-
-
-.n1{
-
-width: 250px;
-  margin: 0 0;
-
-
-  text-align: center;
-  font-size: 20px;
-  
-  height: 30px;
-  border-bottom: none;
-}
-
-.n2{
-margin: 0 0;
-  border-left: 2px solid #ff340c;
-
-  text-align: center;
-  font-size: 20px;
-
-  height: 30px;
-  width: 100px;
-  border-bottom: none;
-
-}
-
-.n3{
-
-margin: 0 0;
-border-left: 2px solid #ff340c;
-border-bottom: none;
-  text-align: right;
-  font-size: 20px;
-
-  height: 30px;
-  width: 110px;
-  
-
-}
-
-/*-----------*/
-/*-----------*/
-/*-----------*/
-/*-----------*/
-
-.imagem img {
-margin-top: auto;
-}
-
-.hd4{
-  display: flex;
-}
-.buttons{
-  margin-top: 0;
-}
-
-
-.hd1{
-        
-  display: flex;
-  width: 90%;
-  height: 200px;
-  background-color: #ff340c;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  align-items: center;
-
-  
-}
-
-.hd2{
-
-        flex-basis: 30%;
-      
-        height: 150px;
-   
-   
-        text-align: left;
-        display: flex;
-        
-}
-
-.hd3{
- 
-       
-  
-       
-        display: block;
-        width: 90%;
-        height: 200px;
-       position: relative;
-           font-family: 'Fonte1', sans-serif;
-   
- 
- 
-}
-
-
-
-.comp{
-
-  display: block;
-  width: 100%;
-  height: 50%;
-  background-color: #ff340c;
-  color: #f2f2f2;
-  text-align: left;
-
-  font-size: 50px;
-  position: absolute;
-  margin-top: 50px;
-
-}
-
-.desc{
-
-
-  display: block;
-  width: 100%;
-  height: auto;
-  color: #f2f2f2;
-  background-color: #ff340c;
-
-  text-align: left;
-  font-size: 30px;
-  position: absolute;
-  top: 50%;
- 
-}
 
 
 
