@@ -829,6 +829,7 @@ margin: 0 10px;
 
 
 
+
 .c{
   display: block;
   margin-bottom: 100px;
@@ -836,13 +837,13 @@ margin: 0 10px;
 
   width: 100%;
   text-align: center;
-  height: auto;
+  height: 400px;
     
 }
 
 .c_im img{
  
-   height: auto;
+   height: 400px;
     
    
 }
