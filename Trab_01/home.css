@@ -27,8 +27,8 @@
 .fa:hover {
   opacity: 0.7;
 }
-/*====================Cores dos ícones das redes sociais=============================
-.*/fa-facebook {
+/*====================Cores dos ícones das redes sociais=============================*/
+.fa-facebook {
   color: blue;
 }
 
@@ -1022,7 +1022,7 @@ form{
 
 	input[type=text], input[type=submit] {
 	  width: 100%;
-	  padding: 5%;
+	  padding: 3%;
 	  margin: 2% 0;
 	  display: inline-block;
 	  border: 1px solid #ccc;
