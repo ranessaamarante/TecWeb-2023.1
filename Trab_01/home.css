@@ -1,74 +1,55 @@
-/*#f4350a*/
+/*Cor dourada para preencher as estrelas*/
 .estrelagold{
 	color: gold;
 }
+/*Cor preta para dar impressão de estrela vazia*/
 .estrelaempty{
 	color: black;
 }
+/*Fonte italica para alguns textos*/
 .italic{
 	font-style: italic;
 }
-.scrollmenu a {
-  width: 30%;
-  display: inline-block;
-  padding: 0;
-  text-decoration: none;
-  color: black;
-  word-wrap: break-word;
-  margin: 0;
-}
-.scrollmenu {
-  display: block;
-  height: 80%;
-  width: 100%;
-  position: relative;
-  overflow: auto;
-  white-space: nowrap;
-  margin: 0;
-  padding: 0;
-}
 
-
+/*Configura a aparência de alguns botões como os de compartilhar nas redes sociais*/
 .fah {
-	font-size: 1.5vw;
-	padding: 1% 2%;
+	font-size: 1.5vw;/*tamanho*/
+	padding: 1% 2%;/*preenchimento*/
 	border: none;
-	border-radius: 5px;
-	cursor: pointer;
+	border-radius: 5px;/*borda redonda*/
+	cursor: pointer;/*cursor muda ao passar por cima*/
 	position: relative;
-  text-align: center;
-  text-decoration: none;
-
+	text-align: center;
+	text-decoration: none;
 }
 
+/*Clareia o botão quando o mouse passa por cima*/
 .fa:hover {
   opacity: 0.7;
 }
-
-.fa-facebook {
-  color: rgb(39, 39, 156);
+/*====================Cores dos ícones das redes sociais=============================
+.*/fa-facebook {
+  color: blue;
 }
 
 .fa-twitter {
- 
   color: lightblue;
 }
 
 .fa-youtube {
- 
   color: white;
 }
 
 .fa-instagram {
- 
   color: hotpink;
 }
 
-
 .fa-pinterest {
- 
-  color: rgb(244, 56, 56);
+  color: white;
 }
+/*====================Cores dos ícones das redes sociais=============================
+.*/
+/*=========================Fontes que imitam as usadas no site============================================================*/
 @font-face {
   font-family: 'Fonte1';
   src: url('Fonte1.ttf');
@@ -78,18 +59,20 @@
   font-family: 'Fonte2';
   src: url('Fonte2.ttf');
 }
+/*=========================Fontes que imitam as usadas no site============================================================*/
+/*Configura a fonte geral, a cor de fundo e tamanho da fonte dos filhos da div pai*/
 .pai{
 	font-family: 'Fonte2', sans-serif;
 	font-size: 2vw;
 	background-color: #ffffff;
 	margin-top: 90px;
-
-
 }
+/*configuração geral de um elemento a, que por ser geramente um link, adota-se azul como cor*/
 a{
 	color: #4378dc;
 	text-decoration: none;
 }
+/*Configuração geral de tamanho e família da fonte e cores dos títulos menores e maiores presentes no site*/
 h1{
 	font-family: 'Fonte1', sans-serif;
 	font-size: 2vw;
@@ -105,11 +88,12 @@ h2{
 	font-weight: bold;
 }
 
-
+/*configura o posicionamento e largura do formulário
+*/
 form{
 	width: 90%;
-			margin-left: auto;
-		margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
@@ -125,11 +109,11 @@ form{
 	  border: 3px solid #f1f1f1;
 
 	}
-
+	/*preenchimento de alguns contêineres*/
 	.cont {
 	  padding: 1%;
 	}
-
+	/*configuração simultânea das caixas de texto e do botão, em partes*/
 	input[type=text], input[type=submit] {
 	  width: 100%;
 	  padding: 2%;
@@ -140,18 +124,20 @@ form{
 	  margin-top: 0;
 	 
 	}
-
+	/*Configura o checkbox*/
 	input[type=checkbox] {
 	  margin-top: 3%;
+	  height: 2vw;
+	  width: auto;
 	}
-
+	/*Configura o botão de submit*/
 	input[type=submit] {
 	  background-color: #3c74dc;
 	  border-radius: 5px;
 	  color: white;
 	  border: none;
 	}
-
+	/*Clareamento do botão ao ser passado pelo mouse*/
 	input[type=submit]:hover {
 	  opacity: 0.8;
 	}
@@ -185,16 +171,19 @@ form{
 		margin-right: auto;
 		height: auto;
 	}
+	/*div que contém título e span para listra, definido como flex para dar liberdade do encaixe de ambos elementos*/
 	.tituloav{
 		display: flex;
 		height: 20%;
 		align-items: center;
 	}
+	/*define flex 1 para a div que contém a imagem do avaliador para que possa se ajustar a largura disponível (10%)*/
 	.imgav{
 		flex:  1;
 		height: 100%;
 		
 	}
+	/*posicionando e definindo o tamanho da imagem de perfil*/
 	.imgav img{
 		margin-top: 50%;
 		width: 100%;
@@ -206,26 +195,27 @@ form{
 		background-color: #ffffff;
 		border: 1px solid grey;
 		display: inline-flex;
-		height: 60%;
+		height: 120px;
 		width: 90%;
 		margin: 1vw auto;
 		padding: 2vw;
 		margin: 2%;
 	}
 	.textoav{
-		flex: 9;
+		flex: 9;/*a parte do texto de avaliação divide espaço com a div da imagem, flex 9 indica que ela ocupa 90% da largura*/
 		height: 80%;
-		overflow: scroll;
-		white-space: normal;
+		overflow: scroll;/*permite que o texto seja rolável caso seu conteúdo ultrapasse os limites da div*/
+		white-space: normal;/*permite que o texto ultrapasse as margens da div*/
 		font-size: 1.5vw;
 		text-align: justify;
 	}
 	.textoav span{
-		color: #4378dc;
+		color: #4378dc;/*coloca a cor do texto que indica o nome de um filme para azul*/
 	}
 	.textoav h1{
 		border: none;
 	}
+	/*posicionamento e aparência da div que contém as estrelas*/
 	.estrelasav{
 		position: absolute;
 		bottom: 1vw;
@@ -233,9 +223,10 @@ form{
 	}
 	.botaodiv{
 		display: block;
-		height: 10%;
+		height: 8%;
 		text-align: center;
 		padding-right: 2%;
+		margin-bottom: 10px;
 
 	}
 	.botao{
@@ -319,13 +310,13 @@ form{
 	.textomat{
 		display: block;
 		height: 80%;
-		font-size: 1vw;
+		font-size: 1.5vw;
 		overflow: scroll;
 
 	}
 	.titulomat{
 		display: block;
-		font-size: 1.5vw;
+		font-size: 2vw;
 		color: white;
 		background-color: rgba(0, 0, 0, 0.8);
 	}
@@ -638,11 +629,30 @@ form{
 		background-color: #ffffff;
 		border: 1px solid grey;
 		display: inline-flex;
-		height: 80%;
+		height: 260px;
 		width: 90%;
 		margin: 1vw auto;
 		padding: 1vw;
 		margin: 2%;
+	}
+	.scrollmenu a {
+	  width: 30%;
+	  display: inline-block;
+	  padding: 0;
+	  text-decoration: none;
+	  color: black;
+	  word-wrap: break-word;
+	  margin: 0;
+	}
+	.scrollmenu {
+	  display: block;
+	  height: 80%;
+	  width: 100%;
+	  position: relative;
+	  overflow: auto;
+	  white-space: nowrap;
+	  margin: 0;
+	  padding: 0;
 	}
 	.textoav{
 		flex: 9;
@@ -692,7 +702,7 @@ form{
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		height: 60vh;
+		height: 1000px;
 		width: 90%;
 		margin-left: auto;
 		margin-right: auto;
@@ -753,13 +763,13 @@ form{
 	.textomat{
 		display: block;
 		height: 80%;
-		font-size: 1vw;
+		font-size: 2vw;
 		overflow: scroll;
 
 	}
 	.titulomat{
 		display: block;
-		font-size: 1.5vw;
+		font-size: 2.5vw;
 		color: white;
 		background-color: rgba(0, 0, 0, 0.8);
 	}
@@ -797,8 +807,8 @@ form{
 	.paragrafosobre{
 		text-align: justify;
 		overflow: scroll;
-		height: 70%;
-		width: 80%;
+		height: 80%;
+		width: 100%;
 		margin: 0;
 	}
 	.textosobre{
@@ -837,7 +847,7 @@ form{
 	}
 	.editorial a{
 		text-align: right;
-		width: 100%;
+		width: 95%;
 		display: block;
 		color: black;
 		font-size: 2vw;
@@ -851,7 +861,7 @@ form{
 	.footer{
 		display: flex;
 		flex-direction: column;
-		height: 20vh;
+		height: 350px;
 		width: 100vw;
 		background-color: #2a2c32;
 		padding: 4%;
@@ -1001,6 +1011,9 @@ form{
 
 	form {
 	  border: 3px solid #f1f1f1;
+	  width: 90%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.cont {
@@ -1009,16 +1022,18 @@ form{
 
 	input[type=text], input[type=submit] {
 	  width: 100%;
-	  padding: 2%;
+	  padding: 5%;
 	  margin: 2% 0;
 	  display: inline-block;
 	  border: 1px solid #ccc;
 	  box-sizing: border-box;
 	  margin-top: 0;
+	  font-size: 2.5vw;
 	}
 
 	input[type=checkbox] {
 	  margin-top: 3%;
+	  font-size: 2vw;
 	}
 
 	input[type=submit] {
@@ -1042,6 +1057,7 @@ form{
 		margin-right: auto;
 		height: auto;
 		padding-bottom: 10%;
+	
 	}
 	.tituloav{
 		display: flex;
@@ -1064,22 +1080,37 @@ form{
 		background-color: #ffffff;
 		border: 1px solid grey;
 		display: inline-flex;
-		height: 80%;
-		width: 90%;
-		margin: 1vw auto;
+		height: 350px;
+		width: 70%;
 		padding: 1vw;
-		margin: 2%;
-		
+		margin: 8%;
+	}
+	.scrollmenu a {
+	  width: 40%;
+	  display: inline-block;
+	  padding: 0;
+	  text-decoration: none;
+	  color: black;
+	  word-wrap: break-word;
+	  margin: 0;
+	}
+	.scrollmenu {
+	  display: block;
+	  height: 80%;
+	  width: 100%;
+	  position: relative;
+	  overflow: auto;
+	  white-space: nowrap;
+	  margin: 0;
+	  padding: 0;
 	}
 	.textoav{
 		flex: 9;
 		height: 80%;
 		overflow: scroll;
 		white-space: normal;
-		font-size: 1.5vw;
+		font-size: 2vw;
 		text-align: justify;
-				
-
 	}
 	.textoav span{
 		color: #4378dc;
@@ -1091,8 +1122,6 @@ form{
 		position: absolute;
 		bottom: 1vw;
 		padding-left: 10%;
-
-	
 	}
 	.botaodiv{
 		display: block;
@@ -1123,10 +1152,11 @@ form{
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		height: 1000px;
 		width: 90%;
 		margin-left: auto;
 		margin-right: auto;
-		height: 60vh;
+		
 	}
 	/*============================infos: novidades============================*/
 	.novidades{
@@ -1136,8 +1166,6 @@ form{
 		border: none;
 		margin-right: 2%;
 		transform: translateY(-2.5%);
-		
-
 	}
 	.titulonov{
 		display: flex;
@@ -1185,13 +1213,13 @@ form{
 	.textomat{
 		display: block;
 		height: 80%;
-		font-size: 1vw;
+		font-size: 2vw;
 		overflow: scroll;
 
 	}
 	.titulomat{
 		display: block;
-		font-size: 1.5vw;
+		font-size: 2.5vw;
 		color: white;
 		background-color: rgba(0, 0, 0, 0.8);
 	}
@@ -1205,11 +1233,10 @@ form{
 	/*============================infos: social============================*/
 	.soc{
 		display: flex;
-        flex-direction: column;
-        height: 100%;
+    flex-direction: column;
+    height: 100%;
 		width: 48%;
 		margin-left: 2%;
-
 		
 	}
 	/*============================infos: social-sobre============================*/
@@ -1230,8 +1257,8 @@ form{
 	.paragrafosobre{
 		text-align: justify;
 		overflow: scroll;
-		height: 70%;
-		width: 80%;
+		height: 80%;
+		width: 100%;
 		margin: 0;
 	}
 	.textosobre{
@@ -1257,7 +1284,6 @@ form{
 	/*============================infos: social-editorial============================*/
 	.editorial{
 		height: 50%;
-		
 	}
 	.tituloeditorial{
 		display: flex;
@@ -1267,11 +1293,11 @@ form{
 		color: black;
 		height: 10%;
 		width: 100%;
-		margin-bottom: 5px;
+		margin-bottom: 15px;
 	}
 	.editorial a{
 		text-align: right;
-		width: 100%;
+		width: 95%;
 		display: block;
 		color: black;
 		font-size: 2vw;
@@ -1285,7 +1311,7 @@ form{
 	.footer{
 		display: flex;
 		flex-direction: column;
-		height: 20vh;
+		height: 350px;
 		width: 100vw;
 		background-color: #2a2c32;
 		padding: 4%;
