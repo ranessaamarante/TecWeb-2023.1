@@ -564,7 +564,7 @@ font-family: 'Fonte1', sans-serif;
 
 .ha{
   width: 100%;
-  height: 50px;
+  height: auto;
   background-color: bisque;
   margin-top: 2%;
   font-size: 40px;
@@ -831,17 +831,19 @@ margin: 0 10px;
 
 .c{
   display: block;
-  margin-bottom: 300px;
+  margin-bottom: 100px;
  
 
   width: 100%;
   text-align: center;
-  height: 500px;
+  height: auto;
+    
 }
 
 .c_im img{
  
-   height: 700px;
+   height: auto;
+    
    
 }
 
