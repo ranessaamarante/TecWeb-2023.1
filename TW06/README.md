@@ -1,5 +1,5 @@
 # TecWeb
-## Implementação com Bootstrap
+## Implementação do trabalho de CSS com Bootstrap
 
 * Vanessa Carvalho
 * Francilândio Lima
