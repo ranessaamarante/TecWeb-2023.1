@@ -1,5 +1,4 @@
-# TecWeb
-## Implementação com Bootstrap
+# Trabalho 01 de TecWeb
 
-* Francilândio Lima Serafim
-* Vanessa Carvalho do Nascimento
+* Vanessa Carvalho
+* Francilândio Lima
