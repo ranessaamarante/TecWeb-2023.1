@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>XMLHttpRequest #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+
+</head>
+
+<body class="conteudo exercicio" style="display: flex;flex-direction: column;">
+    <h1>Deletar Usuário</h1>
+
+
+    <form>
+        <p>
+            <label>ID:</label>
+            <input type="number" id="idDelete">
+        </p>
+    </form>
+
+    <button onclick="excluir()">Excluir</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        const config_delete = {
+            url: 'https://reqres.in/api/users',
+            metodo: 'DELETE',
+            sucesso(resposta) {
+                console.log('DELETE:', resposta);
+                const resultado = document.getElementById('resultado');
+                resultado.innerHTML = ''; // Limpar resultados anteriores
+                resultado.textContent = 'Exclusão feita com sucesso';
+            },
+            erro(e) {
+                console.error('Erro DELETE:', e.codigo, e.texto);
+                resultado.textContent = 'Erro';
+            }
+        };
+
+        function excluir() {
+            const id = document.getElementById("idDelete").value;
+            config_delete.url = `https://reqres.in/api/users/${id}`;
+
+            ajax(config_delete);
+        }
+
+
+
+
+
+
+
+
+        function ajax(config) {
+            const xhr = new XMLHttpRequest();
+            xhr.open(config.metodo, config.url, true); // true para assíncrono
+
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    config.sucesso(xhr.response);
+                } else {
+                    config.erro({
+                        codigo: xhr.status,
+                        texto: xhr.statusText
+                    });
+                }
+            };
+
+            xhr.onerror = function () {
+                config.erro({
+                    codigo: xhr.status,
+                    texto: 'Erro na requisição.'
+                });
+            };
+
+            if (config.metodo === 'GET' || config.metodo === 'DELETE') {
+                xhr.send();
+            } else if (config.metodo === 'POST' || config.metodo === 'PUT') {
+                if (config.data) {
+                    const formData = new FormData();
+                    Object.keys(config.data).forEach(function (key) {
+                        formData.append(key, config.data[key]);
+                    });
+                    xhr.send(formData);
+                } else {
+                    config.erro({
+                        codigo: 400,
+                        texto: 'Dados inválidos para requisição POST ou PUT.'
+                    });
+                }
+            } else {
+                config.erro({
+                    codigo: 400,
+                    texto: 'Método de requisição inválido.'
+                });
+            }
+        }
+
+
+
+    </script>
+</body>

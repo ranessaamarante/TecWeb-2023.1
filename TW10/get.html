@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>XMLHttpRequest #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+
+</head>
+
+<body class="conteudo exercicio" style="display: flex;flex-direction: column;">
+    <h1>Buscar usuário</h1>
+
+
+
+    <form>
+        <p>
+            <label>Buscar ID:</label>
+            <input type="number" id="idBusca">
+        </p>
+    </form>
+
+    <button onclick="buscar()">Buscar</button>
+    <div id="resultado"></div>
+
+
+
+    <script>
+        const config_get = {
+            url: 'https://reqres.in/api/users',
+            metodo: 'GET',
+            sucesso(resposta) {
+                const resultado = document.getElementById('resultado');
+                resultado.innerHTML = ''; // Limpar resultados anteriores
+                // criarTabela(resposta)
+                const id = parseInt(document.getElementById("idBusca").value);
+                const dados = JSON.parse(resposta);
+
+                if (Array.isArray(dados.data)) {
+                    const usuarioEncontrado = dados.data.find(usuario => usuario.id === id);
+
+                    if (usuarioEncontrado) {
+                        const infoUsuario = `ID: ${usuarioEncontrado.id}, Email: ${usuarioEncontrado.email}, Nome: ${usuarioEncontrado.first_name} ${usuarioEncontrado.last_name}`;
+                        const paragrafo = document.createElement('p');
+                        paragrafo.textContent = infoUsuario;
+                        resultado.appendChild(paragrafo);
+
+                    } else {
+                        resultado.textContent = 'Usuário não encontrado.';
+                    }
+                } else {
+                    resultado.textContent = 'Nenhum usuário encontrado.';
+                }
+
+            },
+            erro(e) {
+                console.error('Erro GET:', e.codigo, e.texto);
+            }
+        };
+
+        function buscar() {
+
+            ajax(config_get);
+        }
+
+
+        function ajax(config) {
+            const xhr = new XMLHttpRequest();
+            xhr.open(config.metodo, config.url, true); // true para assíncrono
+
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    config.sucesso(xhr.response);
+                } else {
+                    config.erro({
+                        codigo: xhr.status,
+                        texto: xhr.statusText
+                    });
+                }
+            };
+
+            xhr.onerror = function () {
+                config.erro({
+                    codigo: xhr.status,
+                    texto: 'Erro na requisição.'
+                });
+            };
+
+            if (config.metodo === 'GET' || config.metodo === 'DELETE') {
+                xhr.send();
+            } else if (config.metodo === 'POST' || config.metodo === 'PUT') {
+                if (config.data) {
+                    const formData = new FormData();
+                    Object.keys(config.data).forEach(function (key) {
+                        formData.append(key, config.data[key]);
+                    });
+                    xhr.send(formData);
+                } else {
+                    config.erro({
+                        codigo: 400,
+                        texto: 'Dados inválidos para requisição POST ou PUT.'
+                    });
+                }
+            } else {
+                config.erro({
+                    codigo: 400,
+                    texto: 'Método de requisição inválido.'
+                });
+            }
+        }
+    </script>
+
+</body>
